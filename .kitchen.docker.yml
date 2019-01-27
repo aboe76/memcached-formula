@@ -28,13 +28,13 @@ provisioner:
     base:
       '*':
         - memcached
+        - memcached.config
+        - memcached.python_memcached
   pillars:
     top.sls:
       base:
         '*':
           - memcached
-          - memcached.config
-          - memcached.python_memcached
   pillars-from-files:
     memcached.sls: pillar.example
 platforms:

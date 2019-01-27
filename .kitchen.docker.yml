@@ -55,6 +55,9 @@ suites:
   - name: oxygen
     provisioner:
       salt_bootstrap_options: -qX -p git -p curl -p sudo git 2018.3
+  - name: fluorine
+    provisioner:
+      salt_bootstrap_options: -qX -p git -p curl -p sudo git 2019.2
 
 verifier:
   name: shell

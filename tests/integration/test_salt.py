@@ -8,6 +8,6 @@ def test_memcached_running_and_enabled(host):
     assert memcached.is_enabled
 
 def test_memached_is_listening(host):
-    memcached = host.socket("tcp://127.0.0.1:11211")
+    memcached = host.socket("tcp://11211")
     assert memcached.is_listening
 

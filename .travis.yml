@@ -1,0 +1,27 @@
+---
+sudo: required
+language: python
+services:
+  - docker
+python:
+  - 3.6
+dist: bionic
+install:
+  - bundle install
+  - pip install -r requirements.txt
+env:
+  global:
+    - KITCHEN_YAML=.kitchen.docker.yml
+  matrix:
+    - SUITE: centos
+    - SUITE: ubuntu
+    - SUITE: debian
+
+script:
+  - bundle exec kitchen create -l warn -c 3 $SUITE
+  - bundle exec kitchen converge $SUITE
+  - bundle exec kitchen verify $SUITE
+after_script:
+  - bundle exec kitchen list $SUITE
+  - bundle exec kitchen destroy $SUITE
+

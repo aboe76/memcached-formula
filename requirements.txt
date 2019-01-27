@@ -1,0 +1,4 @@
+requests
+testinfra
+pytest-logging
+paramiko

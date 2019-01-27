@@ -1,5 +1,5 @@
-source "https://rubygems.org"                                                                                 [0/92]
-                                                                                                                    
+source "https://rubygems.org"
+
 gem "test-kitchen"
 gem "kitchen-salt"
 gem "kitchen-sync"

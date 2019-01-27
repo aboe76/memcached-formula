@@ -30,7 +30,7 @@ def salt():
 
 
 @pytest.fixture
-def http_port():
+def port():
     return subprocess.check_output(
         ['docker', 'inspect',
          '-f', '{{(index (index .NetworkSettings.Ports "11211/tcp") 0).HostPort}}',
@@ -39,5 +39,5 @@ def http_port():
 
 
 @pytest.fixture
-def host_ip():
+def server():
     return os.environ.get('KITCHEN_HOSTNAME')

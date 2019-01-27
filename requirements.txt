@@ -1,4 +1,5 @@
 requests
+pymemcache
 testinfra
 pytest-logging
 paramiko

@@ -1,5 +1,4 @@
 ---
-sudo: required
 language: python
 services:
   - docker
@@ -24,4 +23,3 @@ script:
 after_script:
   - bundle exec kitchen list $SUITE
   - bundle exec kitchen destroy $SUITE
-
